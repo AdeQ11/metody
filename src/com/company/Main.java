@@ -3,6 +3,10 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        int tablica[] = {2, 4, 7, 8, 3};
+
+
+
     }
 }
