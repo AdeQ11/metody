@@ -2,30 +2,22 @@ package com.company;
 
 public class Main {
 
+    static int znajdzMin(int tab[], int od) {
 
-    public static void Zamiana(int tablica[], int a, int b) {
-        int c = tablica[a];
-        tablica[a] = tablica[b];
-        tablica[b] = c;
-
-    }
-
-
-    public static void wypisywanieElementu(int tablica[]){
-        for(int i = 0; i < 5; ++i) {
-            System.out.print(tablica[i]);
+        int min = od;
+        for (int i = od; i < tab.length; i++) {
+            if (tab[min] > tab[i]) {
+                min = i;
+            }
         }
+        return min;
     }
+
 
     public static void main(String[] args) {
-
-        int tablica[] = {2, 6, 3, 7, 8};
-        wypisywanieElementu(tablica);
-        System.out.print(" ");
-        Zamiana(tablica, 0, 3);
-        wypisywanieElementu(tablica);
+        int tab[] = {2, 5, 0, 1, 6};
+        System.out.print(znajdzMin(tab, 0));
     }
-
-
 }
+
 
